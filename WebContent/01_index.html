@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>룸메이트 - 방을 구하는 가장 쉬운 방법</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<!-- Bootstrap icons-->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+	rel="stylesheet" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="css/styles.css" rel="stylesheet" />
+<link href="css/styles2.css" rel="stylesheet" />
+</head>
+<body>
+
+	<!--상단 네비게이션 메뉴-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container px-4 px-lg-5">
+			<a class="navbar-brand" href="01_index.html">룸메이트</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
+						role="button" data-bs-toggle="dropdown" aria-expanded="false">원룸</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="/02_onroomPage.html">방
+									찾기</a></li>
+							<li><hr class="dropdown-divider" /></li>
+							<li><a class="dropdown-item" href="#!">찜한 매물</a></li>
+							<li><hr class="dropdown-divider" /></li>
+							<li><a class="dropdown-item" href="#!">방 내놓기</a></li>
+						</ul></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
+						role="button" data-bs-toggle="dropdown" aria-expanded="false">투룸
+							/ 빌라</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="/04_tworoomPage.html">투룸
+									/ 빌라 찾기</a></li>
+							<li><hr class="dropdown-divider" /></li>
+							<li><a class="dropdown-item" href="#!">찜한 매물</a></li>
+							<li><hr class="dropdown-divider" /></li>
+							<li><a class="dropdown-item" href="#!">투룸 / 빌라 내놓기</a></li>
+						</ul></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
+						role="button" data-bs-toggle="dropdown" aria-expanded="false">아파트</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="/06_aptPage.html">아파트
+									매매</a></li>
+							<li><hr class="dropdown-divider" /></li>
+							<li><a class="dropdown-item" href="#!">전세 / 월세</a></li>
+							<li><hr class="dropdown-divider" /></li>
+							<li><a class="dropdown-item" href="#!">신축분양</a></li>
+						</ul></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
+						role="button" data-bs-toggle="dropdown" aria-expanded="false">커뮤니티</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="10_freeboard.jsp">자유게시판</a></li>
+							<li><hr class="dropdown-divider" /></li>
+							<li><a class="dropdown-item" href="#!">인테리어게시판</a></li>
+							<li><hr class="dropdown-divider" /></li>
+							<li><a class="dropdown-item" href="#!">법률상담게시판</a></li>
+							<li><hr class="dropdown-divider" /></li>
+							<li><a class="dropdown-item" href="#!">부동산정보게시판</a></li>
+						</ul></li>
+				</ul>
+				<form class="d-flex" action="09_signup.html">
+					<button class="btn btn-outline-dark">회원가입</button>
+				</form>
+				<form class="d-flex" action="08_login.html">
+					<button class="btn btn-outline-dark" type="submit"
+						href="08_login.html">로그인</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<!--상단 메인 배너-->
+	<div class="bg-dark py-6">
+		<!--bg-dark가 메인 배너 색상-->
+		<img src="/img/hito.png" class="main-person">
+		<div class="container px-4 px-lg-5 my-5 main-banner-text">
+			<div class="text-start text-white">
+				<h1 class="display-6 fw-bolder">
+					방 찾으러 멀리 갈 필요 있어?<br>가까운 <span style="color: yellow;">'룸메이트'</span>에게
+					물어봐!
+				</h1>
+				<br>
+				<p class="lead fw-normal text-white-50 mb-0">방을 찾는 가장 쉬운 방법,
+					룸메이트</p>
+			</div>
+		</div>
+	</div>
+
+	<!--원룸 매물 노출 섹션-->
+	<section class="py-3">
+		<div class="container px-4 px-lg-5 mt-5">
+			<div>
+				<div>
+					<h4 class="today-fav">원룸</h4>
+				</div>
+				<div>
+					<a link href="02_onroomPage.html" class="today-fav-more">더보기 ></a>
+				</div>
+			</div>
+			<div
+				class="row gx-4 gx-lg-5 row-cols-1 row-cols-sm-1 row-cols-lg-3 row-cols-xl-3 justify-content-center"
+				style="clear: both;">
+				<div class="col mb-5">
+					<div class="card h-100">
+						<!-- Product image-->
+						<a href="/03_onroomPage_Detail.html"> <img
+							class="card-img-top" src="/img/bedroom-1285156.jpg" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">사당동 원룸</h5>
+								<!-- Product price-->
+								월세 5000 / 50만원
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp"> 초고속 인터넷 설치, 주차장
+									이용 가능 </span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<a class="btn btn-outline-dark mt-auto"
+									href="/03_onroomPage_Detail.html">자세히 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<!-- Sale badge-->
+						<div class="badge bg-dark text-white position-absolute"
+							style="top: 0.5rem; right: 0.5rem">급매</div>
+						<!-- Product image-->
+						<a href="#"> <img class="card-img-top"
+							src="/img/bedroom-1872196.jpg" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">봉천동 원룸</h5>
+								<!-- Product price-->
+								<!-- <span class="text-muted text-decoration-line-through">$20.00</span> -->
+								월세 7000 / 55만원
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp">관리비 포함, 반려동물 동반
+									가능</span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<a class="btn btn-outline-dark mt-auto" href="#">자세히 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<!-- Product image-->
+						<a href="#"> <img class="card-img-top"
+							src="/img/chairs-2181968.jpg" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">방배동 원룸</h5>
+								<!-- Product price-->
+								<!-- <span class="text-muted text-decoration-line-through">$50.00</span> -->
+								월세 5500 / 65만원
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp">관리비 별도, 보증금 문의 요망</span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<a class="btn btn-outline-dark mt-auto" href="#">자세히 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!--투룸 / 빌라 매물 섹션-->
+	<section>
+		<div class="container px-4 px-lg-5">
+			<div>
+				<div>
+					<h4 class="today-fav">투룸 / 빌라</h4>
+				</div>
+				<div>
+					<a link href="/04_tworoomPage.html" class="today-fav-more">더보기
+						></a>
+				</div>
+			</div>
+			<div
+				class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 justify-content-center"
+				style="clear: both;">
+				<div class="col mb-5">
+					<div class="card h-100">
+						<!-- Sale badge-->
+						<div class="badge bg-dark text-white position-absolute"
+							style="top: 0.5rem; right: 0.5rem">급매</div>
+						<!-- Product image-->
+						<a href="05_tworoomPage_Detail.html"> <img
+							class="card-img-top" src="/img/furniture-998265.jpg" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">서초동 빌라</h5>
+								<!-- Product price-->
+								월세 1억 / 65만원
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp">관리비 별도, 기가랜 설치,
+									남향, 위치 좋음</span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<a class="btn btn-outline-dark mt-auto"
+									href="/05_tworoomPage_Detail.html">자세히 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<!-- Product image-->
+						<a href="#"> <img class="card-img-top"
+							src="/img/living-room-1835923.jpg" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">역삼동 투룸</h5>
+								<!-- Product price-->
+								<!-- <span class="text-muted text-decoration-line-through">$20.00</span> -->
+								월세 1억 5천 / 55만원
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp">관리비 포함, 역에서 도보 3분
+									초역세권</span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<a class="btn btn-outline-dark mt-auto" href="#">자세히 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<!-- Product image-->
+						<a href="#"> <img class="card-img-top"
+							src="/img/living-room-1853203.jpg" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">행운동 원룸</h5>
+								<!-- Product price-->
+								<!-- <span class="text-muted text-decoration-line-through">$50.00</span> -->
+								월세 1억 / 55만원
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp">관리비 별도, 무인 택배함
+									설치, 반려동물 불가</span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<a class="btn btn-outline-dark mt-auto" href="#">자세히 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!--아파트 매물 섹션-->
+	<section>
+		<div class="container px-4 px-lg-5">
+			<div>
+				<div>
+					<h4 class="today-fav">아파트</h4>
+				</div>
+				<div>
+					<a link href="/06_aptPage.html" class="today-fav-more">더보기 ></a>
+				</div>
+			</div>
+			<div
+				class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 justify-content-center"
+				style="clear: both;">
+				<div class="col mb-5">
+					<div class="card h-100">
+						<!-- Product image-->
+						<a href="07_aptPage_Detail.html"> <img class="card-img-top"
+							src="/img/home-1622401.jpg" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">서초 그랑시아</h5>
+								<!-- Product price-->
+								매매 13억 / 전세 10억
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp">기가랜 설치, 남향, 위치
+									좋음, 풀리모델링</span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<a class="btn btn-outline-dark mt-auto"
+									href="/07_aptPage_Detail.html">자세히 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<!-- Product image-->
+						<a href="#"> <img class="card-img-top"
+							src="/img/interior-2685521.jpg" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">역삼 힐스테이트</h5>
+								<!-- Product price-->
+								<!-- <span class="text-muted text-decoration-line-through">$20.00</span> -->
+								월세 5억 / 105만원
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp">역에서 도보 6분 초역세권</span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<a class="btn btn-outline-dark mt-auto" href="#">자세히 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<!-- Sale badge-->
+						<div class="badge bg-dark text-white position-absolute"
+							style="top: 0.5rem; right: 0.5rem">급매</div>
+						<!-- Product image-->
+						<a href="#"> <img class="card-img-top"
+							src="/img/living-room-6823547_1920.png" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">행운 리첸시빌</h5>
+								<!-- Product price-->
+								<!-- <span class="text-muted text-decoration-line-through">$50.00</span> -->
+								매매 11억 / 전세 8억 5천
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp">남향, 올수리, 학군 최상</span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<a class="btn btn-outline-dark mt-auto" href="#">자세히 보기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!--게시판 섹션-->
+	<div class="board-sec">
+		<section
+			class="container px-0 row-board gx-4 gx-lg-5 row-cols-1 row-cols-md-2 justify-content-center"
+			style="clear: both;">
+			<!--메인 자유게시판 섹션 시작-->
+			<div class="container px-4 px-lg-5 mt-5">
+				<div>
+					<div>
+						<h4 class="today-fav" style="color: #f8f8fa;">자유게시판</h4>
+					</div>
+					<div>
+						<a link href="10_freeboard.jsp" class="today-fav-more">바로가기 ></a>
+					</div>
+				</div>
+
+				<div class="col mb-5 justify-content-center" style="clear: both;">
+					<div class="card h-100">
+						<!-- Product image-->
+						<a href="#"> <img class="card-img-top"
+							src="https://dummyimage.com/562x316/#f8f8fa/000000" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">자유게시판 표시 구역</h5>
+								<!-- Product price-->
+								<!-- 부가설명 -->
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp"></span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<!-- <a class="btn btn-outline-dark mt-auto" href="#">자세히 보기</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--메인 자유게시판 섹션 끝-->
+
+			<!--인테리어게시판 섹션 시작-->
+			<div class="container px-4 px-lg-5 mt-5">
+				<div>
+					<div>
+						<h4 class="today-fav" style="color: #f8f8fa;">인테리어게시판</h4>
+					</div>
+					<div>
+						<a link href="#" class="today-fav-more">바로가기 ></a>
+					</div>
+				</div>
+
+				<div class="col mb-5 justify-content-center" style="clear: both;">
+					<div class="card h-100">
+						<!-- Product image-->
+						<a href="#"> <img class="card-img-top"
+							src="https://dummyimage.com/562x316/#f8f8fa/000000" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">인테리어게시판 표시 구역</h5>
+								<!-- Product price-->
+								<!-- 부가설명 -->
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp"></span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<!-- <a class="btn btn-outline-dark mt-auto" href="#">자세히 보기</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--인테리어게시판 섹션 끝-->
+
+			<!--법률정보게시판 섹션 시작-->
+			<div class="container px-4 px-lg-5 mt-5">
+				<div>
+					<div>
+						<h4 class="today-fav" style="color: #f8f8fa;">법률정보게시판</h4>
+					</div>
+					<div>
+						<a link href="#" class="today-fav-more">바로가기 ></a>
+					</div>
+				</div>
+
+				<div class="col mb-5 justify-content-center" style="clear: both;">
+					<div class="card h-100">
+						<!-- Product image-->
+						<a href="#"> <img class="card-img-top"
+							src="https://dummyimage.com/562x316/#f8f8fa/000000" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">법률정보게시판 표시 구역</h5>
+								<!-- Product price-->
+								<!-- 부가설명 -->
+								<!-- Product sub explain-->
+								<br> <span class="product-sub-exp"></span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<!-- <a class="btn btn-outline-dark mt-auto" href="#">자세히 보기</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--법률정보게시판 섹션 끝-->
+
+			<!--부동산정보게시판 섹션 시작-->
+			<div class="container px-4 px-lg-5 mt-5">
+				<div>
+					<div>
+						<h4 class="today-fav" style="color: #f8f8fa;">부동산정보게시판</h4>
+					</div>
+					<div>
+						<a link href="#" class="today-fav-more">바로가기 ></a>
+					</div>
+				</div>
+
+				<div class="col mb-5 justify-content-center" style="clear: both;">
+					<div class="card h-100">
+						<!-- Product image-->
+						<a href="#"> <img class="card-img-top"
+							src="https://dummyimage.com/562x316/#f8f8fa/000000" alt="..." />
+						</a>
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h5 class="fw-bolder">부동산정보게시판 표시 구역</h5>
+								<!-- Product price-->
+								<!-- 부가설명 -->
+								<!-- Product sub explain-->
+								<br>
+								<span class="product-sub-exp"></span>
+							</div>
+						</div>
+						<!-- Product actions-->
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center">
+								<!-- <a class="btn btn-outline-dark mt-auto" href="#">자세히 보기</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--부동산정보게시판 섹션 끝-->
+		</section>
+	</div>
+
+	<!-- Footer-->
+	<footer class="container px-0 py-5 gx-1 gx-4 gx-lg-5 bg-white">
+		<div class="px-0 px-5 gx-lg-5 bottom-site">
+			<div class="sv">
+				<p>고객센터&nbsp;1588-5353</p>
+				<p>9 : 30 ~ 18 : 00</p>
+				<p>(점심시간 13:00 ~ 14:00)</p>
+				<p>주말, 법정공휴일 휴무</p>
+				<a class="btn btn-outline-dark mt-auto qa-button" href="#">1:1
+					문의</a><br> <img src="/img/Asset 1.png" class="logo">
+			</div>
+			<div class="b0">
+				<!--공백 174px-->
+			</div>
+			<div class="b1">
+				<p class="bold">룸메이트</p>
+				<p>룸메이트 메인</p>
+				<p>원룸</p>
+				<p>투룸 / 빌라</p>
+				<p>아파트</p>
+				<p>커뮤니티</p>
+			</div>
+			<div class="b2">
+				<p class="bold">룸메이트 정보</p>
+				<p>서비스 소개</p>
+				<p>인재영입</p>
+				<p>룸메이트 PRESS</p>
+				<p>크레딧</p>
+			</div>
+			<div class="b3">
+				<p class="bold">관련사이트</p>
+				<p>룸메이트 유튜브</p>
+				<p>룸메이트 인스타그램</p>
+				<p>룸메이트 페이스북</p>
+				<p>룸메이트 블로그</p>
+				<p>룸메이트 카페</p>
+			</div>
+			<div class="b4">
+				<p class="bold">지원</p>
+				<p>공지사항</p>
+				<p>자주 묻는 질문</p>
+				<p>이용약관</p>
+				<p>개인정보처리지침</p>
+				<p>전문가 센터</p>
+				<p>사이트맵</p>
+			</div>
+		</div>
+		<hr>
+		<div class="bottom-anounce">
+			<p class="copy1 m-0 text-center text-dark">(주)룸메이트 / 서울시 서초구
+				룸메이트로 1028 룸메빌딩 / 대표 : 강하종 / 개인정보관리책임자 : 김희태, 사유진, 신혜지 / 사업자등록번호 :
+				202-11-02814 / 통신판매업신고 : 2021-서울강남-211028호</p>
+			<p class="copy2 m-0">(주)룸메이트 사이트의 상품/판매회원/중개 서비스/거래 정보, 콘텐츠, UI
+				등에 대한 무단복제, 전송, 배포, 스크래핑 등의 행위는 저작권법, 콘텐츠산업 진흥법 등 관련법령에 의하여 엄격히
+				금지됩니다. [안내보]</p>
+			<p class="copy2 m-0">(주)룸메이트는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품,
+				상품정보, 거래에 관한 의무와 책임은 판매회원에게 있습니다. / Copyright &copy; 2021 roommate
+				Inc. All rights reserved from Bernie_Alex</p>
+		</div>
+	</footer>
+
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+</body>
+</html>

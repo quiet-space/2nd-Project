@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/login.css">
+<title>룸메이트 - 방을 구하는 가장 쉬운 방법</title>
+
+<style>
+img {
+	display: block;
+	margin: auto;
+	margin-top: 4rem;
+	margin-bottom: 30px;
+}
+
+.button1 {
+	margin-top: 0.5rem;
+	text-align: center;
+	width: 178px;
+	height: 40px;
+	display: inline-block;
+	border: 1px solid black;
+	background: white;
+	border-radius: 0.5rem;
+	font-family: "S-Core Dream 3";
+}
+
+.button2 {
+	margin-top: 0.5rem;
+	background: black;
+	text-align: center;
+	width: 178px;
+	height: 40px;
+	display: inline-block;
+	color: #ffffff;
+	border: 1px solid black;
+	border-radius: 0.5rem;
+	font-family: "S-Core Dream 3";
+}
+
+.button1:hover {
+	background: black;
+	color: white;
+}
+
+.button2:hover {
+	background: white;
+	color: black;
+}
+
+h1 {
+	font-family: "S-Core Dream 7";
+}
+
+.ex1 {
+	font-family: "S-Core Dream 3";
+	text-align: left;
+	margin-left: 80px;
+}
+
+.ex {
+	font-family: "S-Core Dream 3";
+}
+
+.submit {
+	width: 352px;
+	height: 40px;
+	border-radius: 0.5rem;
+}
+
+.box {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	border: 1px solid lightgray;
+	width: 512px;
+	height: 600px;
+	text-align: center;
+	border-radius: 8px;
+	display: block;
+	margin: auto;
+}
+
+.container {
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -256px;
+	margin-top: -327px;
+}
+
+.naver {
+	width: 64px;
+	height: 64px;
+	background-color: green;
+	display: inline-block;
+	margin: auto;
+	border-radius: 9px;
+}
+
+.kakao {
+	width: 64px;
+	height: 64px;
+	background-color: yellow;
+	display: inline-block;
+	margin: auto;
+	border-radius: 9px;
+}
+
+.facebook {
+	width: 64px;
+	height: 64px;
+	background-color: blue;
+	display: inline-block;
+	margin: auto;
+	border-radius: 9px;
+}
+
+.google {
+	width: 64px;
+	height: 64px;
+	background-color: red;
+	display: inline-block;
+	margin: auto;
+	border-radius: 9px;
+}
+
+.apple {
+	width: 64px;
+	height: 64px;
+	background-color: black;
+	display: inline-block;
+	margin: auto;
+	border-radius: 9px;
+}
+
+.bar {
+	width: 360px;
+}
+
+
+</style>
+</head>
+<body>
+	<div>
+		<a href="01_index.html"><img src="img/0.브랜드로고.png" id="logo"></a>
+		<form method="post" action="08_loginAction.jsp">
+			<div class="box">
+				<h1>룸메이트 로그인</h1>
+				<p class="ex1">아이디</p>
+				<input type="text" class="submit" name="userid">
+				<p class="ex1">비밀번호</p>
+				<input type="password" class="submit" name="userpw"> <br>
+				<br> 
+				<input type="button" class="button1" value="취소" class="ex" onclick="location.href='01_index.html'">
+				<input type="submit" class="button2" value="로그인" class="ex">
+		</form>
+		
+		<br> <br>
+		<hr class='bar'>
+		<p class="ex">SNS 계정 간편 로그인</p>
+		<div class="parent">
+			<div class="naver">
+				<p class="ex">
+					<span style="color: #ffffff;">네이버</span>
+				</p>
+			</div>
+			<div class="kakao">
+				<p class="ex">카카오</p>
+			</div>
+			<div class="facebook">
+				<p class="ex">
+					<span style="color: #ffffff;">페이스북</span>
+				</p>
+			</div>
+			<div class="google">
+				<p class="ex">
+					<span style="color: #ffffff;">구글</span>
+				</p>
+			</div>
+			<div class="apple">
+				<p class="ex">
+					<span style="color: #ffffff;">애플</span>
+				</p>
+			</div>
+
+
+		</div>
+		<p class="ex">아이디, 비밀번호 찾기</p>
+		<p class="ex">도움이 필요하세요?</p>
+
+	</div>
+	</div>
+</body>
+</html>
